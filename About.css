@@ -1,0 +1,140 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-image: url("tools/image0..jpg"); /* Specify the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff; /* Text color */
+    padding: 10px 0;
+    position: relative;
+}
+header .container {
+    position: relative;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Logo styles */
+header h1 {
+    position: relative;
+    z-index: 1; /* Ensure the text is above the background image */
+}
+/* Title styles */
+h1 {
+    font-size: 36px; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    color: #ffffff; /* Adjust the color as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure the navigation is above the background image */
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+/* Navigation link styles */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative; /* Ensure the ::after pseudo-element is positioned relative to the link */
+}
+
+nav ul li a::after {
+    content: ''; /* Create an empty content to represent the underline */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the distance of the underline from the text */
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #fff;
+    transition: bottom 0.3s ease; /* Add a smooth transition effect for the underline */
+    opacity: 0; /* Initially hide the underline */
+}
+
+nav ul li a:hover::after {
+    bottom: 0; /* Show the underline on hover */
+    opacity: 1; /* Make the underline fully visible */
+}
+
+/* About section styles */
+#About {
+    background-color: #f4f4f4; /* Background color */
+    padding: 50px 20px; /* Padding */
+    border-top: 2px none; /* Top border */
+    border-bottom: none; /* Bottom border */
+}
+/* Container styles */
+.container-ul {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add padding to the container */
+}
+
+.container {
+    max-width: 800px; /* Maximum width of content */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: justify; /* Justify text */
+    padding: 40px; /* Padding */
+}
+
+.container h2 {
+    font-size: 24px; /* Heading font size */
+    margin-bottom: 20px; /* Bottom margin for heading */
+    color: #333; /* Heading color */
+    text-align: center;
+}
+
+.container p {
+    font-size: 16px; /* Paragraph font size */
+    line-height: 1.6; /* Line height */
+    margin-bottom: 20px; /* Bottom margin for paragraphs */
+    color: #666; /* Paragraph color */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.container-fo p {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 0; /* Margin */
+    line-height: 1.5; /* Line height */
+}
+.container-fo {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px 0; /* Add padding to the container */
+}
+
