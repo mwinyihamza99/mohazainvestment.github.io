@@ -8,6 +8,8 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -23,8 +25,9 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff; /* Text color */
-    padding: 10px 0;
+    padding: 10px 20px;
     position: relative;
+    text-align: center;
 }
 header .container {
     position: relative;
@@ -54,6 +57,7 @@ nav ul {
     text-align: center;
     position: relative;
     z-index: 1; /* Ensure the navigation is above the background image */
+    display: flex;
 }
 nav ul li {
     display: inline;
@@ -84,17 +88,43 @@ nav ul li a:hover::after {
 }
 
 /* About section styles */
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
 #About {
     background-color: #f4f4f4; /* Background color */
     padding: 50px 20px; /* Padding */
     border-top: 2px none; /* Top border */
     border-bottom: none; /* Bottom border */
 }
+h2, h3 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
 /* Container styles */
 .container-ul {
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 960px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container horizontally */
     padding: 0 20px; /* Add padding to the container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
@@ -122,7 +152,7 @@ nav ul li a:hover::after {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 20px;
     text-align: center;
 }
 .container-fo p {
@@ -136,5 +166,77 @@ footer {
     max-width: 1200px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px 0; /* Add padding to the container */
+}
+/* Responsive CSS for small screens (phones) */
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 10px; /* Adjust padding for smaller header */
+    }
+    .navigation {
+        justify-content: center; /* Center the navigation items */
+    }
+    .navigation__list {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items horizontally */
+    }
+    .navigation__link {
+        padding: 5px 10px; /* Adjust padding for smaller links */
+    }
+    .main-content {
+        padding: 20px; /* Adjust padding for smaller content */
+    }
+    .section-title {
+        font-size: 1.5rem; /* Adjust font size for smaller titles */
+    }
+    .about-section p {
+        font-size: 0.9rem; /* Adjust font size for smaller paragraphs */
+    }
+    .footer__section {
+        margin-bottom: 10px; /* Adjust margin for smaller footer sections */
+    }
+    .footer__copyright {
+        font-size: 0.8rem; /* Adjust font size for copyright text */
+    }
+}
+/* Responsive CSS for small screens (phones) */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for header */
+    header {
+        padding: 10px; /* Adjust padding for smaller header */
+    }
+
+    /* Adjustments for navigation */
+    nav ul {
+        justify-content: center; /* Center the navigation items */
+        flex-direction: column; /* Stack navigation items vertically */
+        text-align: center; /* Center text */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add margin between navigation items */
+    }
+
+    /* Adjustments for main content */
+    main {
+        padding: 20px; /* Adjust padding for smaller content */
+    }
+
+    section {
+        padding: 20px; /* Adjust padding for smaller sections */
+    }
+
+    /* Adjustments for footer */
+    footer {
+        padding: 10px; /* Adjust padding for smaller footer */
+    }
+
+    .container-fo {
+        flex-direction: column; /* Stack footer items vertically */
+        text-align: center; /* Center text */
+    }
+
+    .container-fo p {
+        margin: 10px 0; /* Add margin between footer items */
+    }
 }
 

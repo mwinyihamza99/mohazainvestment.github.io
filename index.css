@@ -26,13 +26,16 @@ body {
 }
 /* Container styles */
 .container-ul {
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 960px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container horizontally */
     padding: 0 20px; /* Add padding to the container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container-fo {
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 960px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px 0; /* Add padding to the container */
 }
@@ -43,6 +46,7 @@ body {
     padding: 20px 0; /* Add padding to the container */
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .container-wel h2 {
@@ -64,7 +68,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff; /* Text color */
-    padding: 10px 0;
+    padding: 10px 20px;
     position: relative;
     
 }
@@ -93,10 +97,11 @@ h1 {
 }
 /* Navigation Menu styles */
 nav ul {
-    list-style-type: none;
     text-align: center;
     position: relative;
     z-index: 1; /* Ensure the navigation is above the background image */
+    list-style-type: none;
+    display: flex
 }
 
 nav ul li {
@@ -129,7 +134,7 @@ nav ul li a:hover::after {
 /* Hero section styles */
 #hero {
     background-color: #ffffff;
-    padding: 50px 0;
+    padding: 60px 20pxS;
     text-align: center;
     position: relative;
     background-size: cover;
@@ -203,8 +208,8 @@ footer {
     display: flex;
     justify-content: space-between; /* Adjust as needed */
     flex-wrap: wrap;
-    max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 9600px; /* Adjust max-width as needed */
+    margin: 20px auto; /* Center the container horizontally */
     padding: 20px; /* Add padding to the container */
 }
 
@@ -248,6 +253,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .container:hover {
@@ -274,6 +280,9 @@ footer {
 section {
     position: relative; /* Establish positioning context */
     cursor: pointer; /* Change cursor to pointer */
+    padding: 20px;
+    margin-bottom: 20px;
+    width:auto;
 }
 
 section:hover {
@@ -284,6 +293,61 @@ section h2,
 section p {
     position: relative; /* Ensure text content stays on top of background */
     z-index: 2; /* Ensure text content stays on top of background */
+}
+/* Responsive CSS for small screens */
+@media only screen and (max-width: 768px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #sections-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    .container-wel h2 {
+        font-size: 28px;
+    }
+
+    .container-wel p {
+        font-size: 16px;
+    }
+
+    #hero {
+        min-height: 300px;
+    }
+
+    #About,
+    #services,
+    #contact {
+        margin: 0;
+        width: calc(100% - 40px);
+    }
+
+    #About h2,
+    #services h2,
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    .service {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
 }
 
 

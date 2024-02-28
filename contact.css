@@ -26,7 +26,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff; /* Text color */
-    padding: 10px 0;
+    padding: 10px 20px;
     position: relative;
 }
 header .container {
@@ -57,6 +57,7 @@ nav ul {
     text-align: center;
     position: relative;
     z-index: 1; /* Ensure the navigation is above the background image */
+    display: flex;
 }
 
 nav ul li {
@@ -159,10 +160,12 @@ footer {
 }
 /* Container styles */
 .container-ul {
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 960px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container horizontally */
     padding: 0 20px; /* Add padding to the container */
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container-fo {
@@ -265,4 +268,78 @@ input:focus + label, input:not(:placeholder-shown) + label {
 }
 .social-icons a:hover {
     color: #007bff;
+}
+/* Responsive CSS for small screens */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for header */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Adjustments for sections */
+    #hero {
+        padding: 40px 20px;
+    }
+
+    #About,
+    #services,
+    #contact {
+        padding: 30px 20px;
+    }
+
+    #About h2,
+    #services h2,
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    /* Adjustments for footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .container-fo {
+        margin: 10px 0;
+    }
+
+    .contact-info {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* General adjustments */
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 }

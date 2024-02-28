@@ -10,12 +10,6 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* Header styles */
 header {
     background-image: url("tools/image0..jpg"); /* Specify the path to your background image */
@@ -23,7 +17,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff; /* Text color */
-    padding: 10px 0;
+    padding: 10px 20px;
     position: relative;
     
 }
@@ -55,6 +49,8 @@ nav ul {
     text-align: center;
     position: relative;
     z-index: 1; /* Ensure the navigation is above the background image */
+    display: flex;
+    justify-content: center; /* Center align navigation links */
 }
 
 nav ul li {
@@ -99,10 +95,21 @@ footer {
     text-align: center;
 }
 /* Container styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding:0 20px;
+    max-width: 1200px; /* Limit maximum width of container */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
 .container-ul {
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 960px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container horizontally */
     padding: 0 20px; /* Add padding to the container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 .container-fo p {
     font-size: 14px;
@@ -119,6 +126,7 @@ footer {
 /* Services section styles */
 #services {
     padding: 50px 0;
+    text-align: center; /* Center-align the content */
 }
 
 #services h2 {
@@ -128,6 +136,8 @@ footer {
 
 .service {
     margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc; /* Add border for better visualization */
 }
 
 .service h3 {
@@ -148,6 +158,7 @@ footer {
 .container-ser {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly */
 }
 .service h3 {
     font-size: 20px;
@@ -167,5 +178,27 @@ footer {
     font-size: 28px; /* Adjust font size as needed */
     font-weight: bold; /* Add bold font weight */
 }
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
 
+    nav ul {
+        flex-direction: column; /* Change to column layout on smaller screens */
+    }
 
+    nav ul li {
+        display: block; /* Change to block layout on smaller screens */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    .container-fo {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    #services .service {
+        width: 100%; /* Set width to 100% on smaller screens */
+    }
+}
