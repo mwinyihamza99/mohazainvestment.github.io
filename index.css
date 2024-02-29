@@ -303,11 +303,17 @@ section p {
     }
     
     nav ul {
-        flex-direction: column;
+        margin-top: 20px; /* Add margin to separate from h1 */
+        display: flex; /* Change display to flex */
+        justify-content: center; /* Center the navigation horizontally */ 
     }
-    
+    nav {
+        text-align: center; /* Center the navigation horizontally */
+    }
+
     nav ul li {
-        margin: 10px 0;
+        margin: 0 5px;
+        display: inline;
     }
 
     #sections-container {
@@ -318,7 +324,10 @@ section p {
     .container {
         width: calc(100% - 40px);
     }
-
+    .container-ul {
+        margin-top: 20px; /* Add margin to separate from h1 and nav */
+        display:inline;
+    }
     .container-wel h2 {
         font-size: 28px;
     }

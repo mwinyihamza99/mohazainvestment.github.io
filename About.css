@@ -167,53 +167,32 @@ footer {
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px 0; /* Add padding to the container */
 }
-/* Responsive CSS for small screens (phones) */
-@media only screen and (max-width: 600px) {
-    .header {
-        padding: 10px; /* Adjust padding for smaller header */
-    }
-    .navigation {
-        justify-content: center; /* Center the navigation items */
-    }
-    .navigation__list {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center navigation items horizontally */
-    }
-    .navigation__link {
-        padding: 5px 10px; /* Adjust padding for smaller links */
-    }
-    .main-content {
-        padding: 20px; /* Adjust padding for smaller content */
-    }
-    .section-title {
-        font-size: 1.5rem; /* Adjust font size for smaller titles */
-    }
-    .about-section p {
-        font-size: 0.9rem; /* Adjust font size for smaller paragraphs */
-    }
-    .footer__section {
-        margin-bottom: 10px; /* Adjust margin for smaller footer sections */
-    }
-    .footer__copyright {
-        font-size: 0.8rem; /* Adjust font size for copyright text */
-    }
-}
+
 /* Responsive CSS for small screens (phones) */
 @media only screen and (max-width: 768px) {
     /* Adjustments for header */
-    header {
-        padding: 10px; /* Adjust padding for smaller header */
+    header .container {
+        display: flex;
+        flex-direction: flex;
+        align-items: center;
+    }
+    header h1 {
+        margin-bottom: 20px; /* Add margin below h1 */
     }
 
     /* Adjustments for navigation */
     nav ul {
-        justify-content: center; /* Center the navigation items */
-        flex-direction: column; /* Stack navigation items vertically */
-        text-align: center; /* Center text */
+        margin-top: 20px; /* Add margin to separate from h1 */
+        display: flex; /* Change display to flex */
+        justify-content: center; /* Center the navigation horizontally */ 
+    }
+    nav {
+        text-align: center; /* Center the navigation horizontally */
     }
 
     nav ul li {
-        margin: 10px 0; /* Add margin between navigation items */
+        margin: 0 5px;
+        display: inline;
     }
 
     /* Adjustments for main content */
@@ -238,5 +217,10 @@ footer {
     .container-fo p {
         margin: 10px 0; /* Add margin between footer items */
     }
+    .container-ul {
+        margin-top: 20px; /* Add margin to separate from h1 and nav */
+        display: inline;
+    }
 }
+
 
